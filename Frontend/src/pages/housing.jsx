@@ -6,7 +6,7 @@ export default function Housing() {
   const { id } = useParams();
   const housing = Data.find((item) => item.id === id);
 
-  // if (housing === undefined) return <NotFound type="housing" />;
+  if (housing === undefined) return <NotFound type="housing" />;
 
   let index = 0;
 
