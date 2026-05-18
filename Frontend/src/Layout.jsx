@@ -6,7 +6,7 @@ import "./Layout.sass";
 
 export default function Layout() {
   return (
-    <>
+    <div className="layout">
       <header>
         <img src={logo} alt="Logo de Kasa" className="logo" />
         <nav>
@@ -25,6 +25,6 @@ export default function Layout() {
         <img src={logoFooter} alt="Logo de Kasa" className="logo" />
         <p>&copy; 2020 Kasa. All rights reserved.</p>
       </footer>
-    </>
+    </div>
   );
 }
