@@ -8,7 +8,9 @@ export default function Layout() {
   return (
     <div className="layout">
       <header>
-        <img src={logo} alt="Logo de Kasa" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo de Kasa" className="logo" />
+        </Link>
         <nav>
           <Link to="/" className="nav-link">
             Accueil
@@ -22,7 +24,9 @@ export default function Layout() {
         <Outlet />
       </main>
       <footer>
-        <img src={logoFooter} alt="Logo de Kasa" className="logo" />
+        <Link to="/">
+          <img src={logoFooter} alt="Logo de Kasa" className="logo" />
+        </Link>
         <p>&copy; 2020 Kasa. All rights reserved.</p>
       </footer>
     </div>
