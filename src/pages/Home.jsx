@@ -1,5 +1,7 @@
 import "../assets/styles/Home.sass";
-import HomeHousing from "../components/homeHousing";
+import HomeHousing from "../components/Card";
+import Data from "../api.json";
+
 
 export default function Home() {
   return (
@@ -9,7 +11,11 @@ export default function Home() {
           Chez vous, <br /> partout et ailleurs
         </h1>
       </section>
-      <HomeHousing />
+      <section className="home_housing">
+      {Data.map((housing) => (
+        <HomeHousing key={housing.id} {...housing} />
+      ))}
+    </section>
     </>
   );
 }

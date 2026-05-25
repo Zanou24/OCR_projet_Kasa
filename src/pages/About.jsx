@@ -1,6 +1,6 @@
 import about from "../assets/img/about.jpg";
 import "../assets/styles/About.sass";
-import Collapses from "../components/collapses";
+import Collapses from "../components/Collapses";
 import items from "../collapses.json";
 
 // const items = [

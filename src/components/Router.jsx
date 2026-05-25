@@ -1,8 +1,8 @@
-import { Link, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Layout from "../Layout";
-import Housing from "../pages/housing";
+import Housing from "../pages/Housing";
 import NotFound from "../pages/NotFound";
 
 export default function Router() {
@@ -13,7 +13,6 @@ export default function Router() {
         <Route path="/about" element={<About />} />
         <Route path="/housing/:id" element={<Housing />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/housing/*" element={<NotFound type="housing" />} />
       </Route>
     </Routes>
   );
