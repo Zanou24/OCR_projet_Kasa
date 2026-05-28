@@ -1,0 +1,26 @@
+.banner
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 25px
+    height: 223px
+    color: #fff
+    h1
+        font-size: 3rem
+    br
+        display: none
+@media ( max-width: 1024px ) and ( min-width: 768px )
+    .banner
+        height: 150px
+@media (max-width: 768px)
+    .banner
+        border-radius: 10px
+        height: 120px
+        h1
+            width: 90%
+            font-size: 1.5rem
+        br
+            display: block

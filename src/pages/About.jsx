@@ -2,6 +2,7 @@ import about from "../assets/img/about.jpg";
 import "../assets/styles/About.sass";
 import Collapses from "../components/Collapses";
 import items from "../collapses.json";
+import Banner from "../components/Banner";
 
 // const items = [
 //   {
@@ -18,11 +19,7 @@ import items from "../collapses.json";
 export default function About() {
   return (
     <section className="about">
-      <img
-        src={about}
-        alt="Image de présentation de la page à propos"
-        className="about_intro"
-      />
+      <Banner opacity={0.2} bgUrl={about} />
       <div className="collapses">
         {items.map((item) => (
           <Collapses
