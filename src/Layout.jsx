@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "./assets/logo.svg";
 import logoFooter from "./assets/logoFooter.svg";
 import "./Layout.sass";
@@ -12,12 +12,22 @@ export default function Layout() {
           <img src={logo} alt="Logo de Kasa" className="logo" />
         </Link>
         <nav>
-          <Link to="/" className="nav-link">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
             Accueil
-          </Link>
-          <Link to="/a-propos" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/a-propos"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
             A Propos
-          </Link>
+          </NavLink>
         </nav>
       </header>
       <main>
