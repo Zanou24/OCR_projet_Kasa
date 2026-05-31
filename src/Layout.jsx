@@ -15,7 +15,7 @@ export default function Layout() {
           <Link to="/" className="nav-link">
             Accueil
           </Link>
-          <Link to="/about" className="nav-link">
+          <Link to="/a-propos" className="nav-link">
             A Propos
           </Link>
         </nav>
