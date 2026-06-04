@@ -15,22 +15,28 @@ export default function Slideshow({ pictures, alt }) {
 
   return (
     <div className="slideshow">
-      <img
-        onClick={handlePrevious}
-        src={arrow}
-        alt="Arrow"
-        className="prev arrow"
-      />
+      {pictures.length > 1 && (
+        <img
+          onClick={handlePrevious}
+          src={arrow}
+          alt="Arrow"
+          className="prev arrow"
+        />
+      )}
       <img src={pictures[index]} alt={alt} className="pictures" />
-      <img
-        onClick={handleNext}
-        src={arrow}
-        alt="Arrow"
-        className="next arrow"
-      />
-      <p className="count">
-        {index + 1}/{pictures.length}
-      </p>
+      {pictures.length > 1 && (
+        <img
+          onClick={handleNext}
+          src={arrow}
+          alt="Arrow"
+          className="next arrow"
+        />
+      )}
+      {pictures.length > 1 && (
+        <p className="count">
+          {index + 1}/{pictures.length}
+        </p>
+      )}
     </div>
   );
 }
